@@ -1,18 +1,15 @@
 
-.lesson {
+.color-picker {
     text-align: center;
     max-width: 330px;
-}
-
-.color-picker {
-
-
 }
 
 .color-title {
     text-decoration: underline;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
+    max-width: 330px;
 }
 
 .color-sample {
