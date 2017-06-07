@@ -11,4 +11,8 @@ tmp
 perf-logs
 v8.log
 
-
+app/*js
+app/*js.map
+app/*/*js
+app/*/*js.map
+package-lock.json
