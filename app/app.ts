@@ -6,7 +6,7 @@ import {SearchBox} from "./search-box/search-box.component";
 
 @Component({
     selector: 'app',
-    template: `<search-box></search-box>`
+    template: `<search-box placeholder="Custom Placeholder"></search-box>`
 })
 export class App {
 
