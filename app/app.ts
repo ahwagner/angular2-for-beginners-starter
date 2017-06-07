@@ -2,18 +2,31 @@
 import {Component, NgModule} from "@angular/core";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import {BrowserModule} from "@angular/platform-browser";
-import {SearchBox} from "./search-box/search-box.component";
+import {ColorPicker} from "./color-picker/color-picker";
+
 
 @Component({
     selector: 'app',
-    template: `<search-box placeholder="Custom Placeholder"></search-box>`
+    template: `
+        
+        <color-picker #picker color="red" (color)="onColor($event)"></color-picker>
+    
+        <button (click)="picker.reset()">Reset</button>
+        
+    `
 })
 export class App {
+
+    color:string;
+
+    onColor(color) {
+        console.log("color:", color);
+    }
 
 }
 
 @NgModule({
-    declarations: [App, SearchBox],
+    declarations: [App, ColorPicker],
     imports: [BrowserModule],
     bootstrap: [App]
 })
