@@ -12,7 +12,7 @@ import {CollapseOnClick} from "./collapse-on-click/collapse-on-click.directive";
     selector:'app',
     template: `
         
-        <div class="card card-strong disable-text-selection">
+        <div collapse-on-click class="card card-strong disable-text-selection">
            
             <i class="md-icon collapsible-indicator">arrow_drop_down</i>
            
@@ -26,3 +26,16 @@ export class App {
 
 
 }
+
+
+
+@NgModule({
+    declarations: [App, CollapseOnClick],
+    imports: [BrowserModule],
+    bootstrap: [App]
+})
+export class AppModule {
+
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule);
