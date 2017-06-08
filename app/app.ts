@@ -12,13 +12,11 @@ import {CollapseOnClick} from "./collapse-on-click/collapse-on-click.directive";
     selector:'app',
     template: `
         
-        <div collapse-on-click #panel="cp" 
-                            class="card card-strong disable-text-selection">
+        <div class="card card-strong disable-text-selection">
            
-            <i class="md-icon collapsible-indicator" *ngIf="!panel.collapsed">arrow_drop_down</i>
-            <i class="md-icon collapsible-indicator" *ngIf="panel.collapsed">arrow_drop_up</i>
+            <i class="md-icon collapsible-indicator">arrow_drop_down</i>
            
-            <div class="collapsible-section" *ngIf="!panel.collapsed">   
+            <div class="collapsible-section">   
                 This page section is collapsible, double click it and it will collapse or expand.
             </div>
         </div>
@@ -28,14 +26,3 @@ export class App {
 
 
 }
-
-@NgModule({
-    declarations: [App, CollapseOnClick],
-    imports: [BrowserModule],
-    bootstrap: [App]
-})
-export class AppModule {
-
-}
-
-platformBrowserDynamic().bootstrapModule(AppModule);
