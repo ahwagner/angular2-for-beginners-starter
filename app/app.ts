@@ -26,3 +26,16 @@ export class App {
 
 
 }
+
+
+
+@NgModule({
+    declarations: [App],
+    imports: [BrowserModule],
+    bootstrap: [App]
+})
+export class AppModule {
+
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule);
