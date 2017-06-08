@@ -1,3 +1,3 @@
 
-import {Directive, HostListener, Input, Output, EventEmitter} from "@angular/core";
+import {Directive, HostListener, Input, Output, EventEmitter, HostBinding} from "@angular/core";
 
