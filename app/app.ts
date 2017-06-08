@@ -12,7 +12,8 @@ import {CollapseOnClick} from "./collapse-on-click/collapse-on-click.directive";
     selector:'app',
     template: `
         
-        <div collapse-on-click class="card card-strong disable-text-selection">
+        <div collapse-on-click #cp="collapsible" [collapsed]="collapsed" (collapsed)="onToggle($event)"
+             class="card card-strong disable-text-selection" [class.collapsed]="cp.collapsed">
            
             <i class="md-icon collapsible-indicator">arrow_drop_down</i>
            
@@ -24,6 +25,11 @@ import {CollapseOnClick} from "./collapse-on-click/collapse-on-click.directive";
 })
 export class App {
 
+
+    collapsed = false;
+    onToggle(collapsed) {
+        console.log(collapsed)
+    }
 
 }
 

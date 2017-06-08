@@ -2,11 +2,16 @@
 import {Directive, HostListener, Input, Output, EventEmitter, HostBinding} from "@angular/core";
 
 @Directive({
-    selector: '[collapse-on-click]'
+    selector: '[collapse-on-click]',
+    exportAs: 'collapsible'
 })
 export class CollapseOnClick {
 
+    @Input("collapsed")
     isCollapsed = false;
+
+    @Output("collapsed")
+    collapsedOutput = new EventEmitter();
 
     @HostBinding('class.collapsed')
     get collapsed() {
@@ -16,6 +21,7 @@ export class CollapseOnClick {
     @HostListener('click')
     toggle(){
         this.isCollapsed = !this.isCollapsed;
+        this.collapsedOutput.emit(this.isCollapsed)
     }
 
 }
