@@ -4,7 +4,7 @@ import {NgModule} from "@angular/core";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import {BrowserModule} from "@angular/platform-browser";
 
-import {CollapseOnClick} from "./collapse-on-click.directive";
+import {CollapseOnClick} from "./collapse-on-click/collapse-on-click.directive";
 
 
 
